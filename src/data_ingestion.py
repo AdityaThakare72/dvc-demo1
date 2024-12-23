@@ -14,7 +14,8 @@ y = df['loan_status']
 from sklearn.model_selection import train_test_split
 
 x_train, x_test, y_train, y_test = train_test_split(x, y,
-                                                    random_state=0, stratify= y)
+                                                    random_state=0, stratify= y,
+                                                    test_size=0.30)
 
 train_data = pd.concat([x_train, y_train], axis=1)
 test_data = pd.concat([x_test, y_test], axis=1)
