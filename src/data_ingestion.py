@@ -3,7 +3,7 @@ import numpy as np
 
 import os
 
-df = pd.read_csv("/home/aditya/DSMP2/MLOPS/1PIPELINE-DVC/loan_approval_dataset.csv")
+df = pd.read_csv(r"D:\loan_approval_dataset.csv")
 
 df.columns = df.columns.str.replace(' ', '')
 
@@ -23,7 +23,7 @@ test_data = pd.concat([x_test, y_test], axis=1)
 
 data_path = os.path.join('data', 'raw')
 
-os.makedirs(data_path)
+os.makedirs(data_path, exist_ok=True)
 
 
 # save to these created path
